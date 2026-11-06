@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aaryav Studios - Portfolio Website
+
+Professional video production, editing, and cinematography portfolio for **Aaryav Studios**.
+
+## Company Details
+- **Email:** aaryavstudios@gmail.com
+- **Address:** Kilvani Naka, Office no 601, 6th Floor, Premaldeep Square, opp. Pravin Tailor, Silvassa, Dadra and Nagar Haveli and Daman and Diu 396230
+- **Phone Numbers:**
+  - +91 93286 03748
+  - +91 70487 34139
+- **Leadership:**
+  - Himanshu Singh (Founder & CEO)
+  - Chirag Singh (Co-Founder & COO)
 
 ## Getting Started
 

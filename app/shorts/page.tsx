@@ -11,7 +11,7 @@ export default function ShortsPage() {
           </span>
         </h1>
         <p className="text-2xl font-black uppercase mb-12 max-w-3xl text-black">
-          High-retention vertical content designed for Instagram Reels, TikTok, and YouTube Shorts.
+          High-retention vertical content engineered by our creative team for Instagram Reels, TikTok, and YouTube Shorts.
         </p>
         <VideoGrid videos={shorts} type="short" />
       </div>

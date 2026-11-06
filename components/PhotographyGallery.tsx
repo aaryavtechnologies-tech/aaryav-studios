@@ -19,10 +19,10 @@ export function PhotographyGallery() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl brutalist-heading mb-6 text-black">
-            FREELANCE <span className="bg-black text-[#FFDE59] px-4 py-2 border-4 border-black shadow-[6px_6px_0px_black] uppercase">PHOTOGRAPHY</span>
+            BRAND & STUDIO <span className="bg-black text-[#FFDE59] px-4 py-2 border-4 border-black shadow-[6px_6px_0px_black] uppercase">PHOTOGRAPHY</span>
           </h2>
           <p className="text-xl md:text-2xl font-black uppercase tracking-tight bg-white text-black inline-block px-4 py-2 border-4 border-black shadow-brutalist">
-            CAPTURING MOMENTS WITH A CINEMATIC EYE.
+            CAPTURING HIGH-IMPACT BRAND VISUALS WITH A CINEMATIC EYE.
           </p>
         </div>
 

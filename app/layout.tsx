@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CHIRAG SINGH | Video Editor & Storyteller",
-  description: "Professional video editing and cinematography portfolio of Chirag Singh. 3+ years of experience crafting high-converting visual stories for HIX, marketing agencies, and top creators.",
+  title: "AARYAV STUDIOS | Creative Video Production & Post-Production Agency",
+  description: "Full-service video production and post-production agency portfolio of Aaryav Studios. Crafting high-converting visual stories for top brands, marketing agencies, and enterprise creators.",
   icons: {
     icon: "/icon.png",
   },

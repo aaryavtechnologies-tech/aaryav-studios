@@ -11,7 +11,7 @@ export default function LongFormPage() {
           </span>
         </h1>
         <p className="text-2xl font-black uppercase mb-12 max-w-3xl">
-          Cinematic storytelling, professional color grading, and seamless pacing.
+          Cinematic storytelling, professional color grading, and seamless pacing produced by Aaryav Studios' post-production team.
           Hover to preview, click to watch full edit.
         </p>
         <VideoGrid videos={featured} type="long" />
