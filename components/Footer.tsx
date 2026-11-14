@@ -29,6 +29,30 @@ export const Footer = () => {
               <Link href="/shorts" className="hover:text-[#FFDE59] transition-colors">SHORTS</Link>
               <Link href="/blog" className="hover:text-[#FFDE59] transition-colors">INSIGHTS</Link>
             </div>
+
+            {/* Official Social & Discovery Links */}
+            <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-white/20">
+              <a
+                href="https://www.instagram.com/aaryavstudios/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-zinc-900 hover:bg-[#FFDE59] text-white hover:text-black font-black text-[11px] uppercase tracking-wider px-2.5 py-1.5 border border-white/50 flex items-center gap-1.5 transition-colors"
+                aria-label="Aaryav Studios Instagram Profile"
+              >
+                <span>Instagram @aaryavstudios</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+              <a
+                href="https://share.google/XjYDdslcZE47oTgbS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-zinc-900 hover:bg-white text-white hover:text-black font-black text-[11px] uppercase tracking-wider px-2.5 py-1.5 border border-white/50 flex items-center gap-1.5 transition-colors"
+                aria-label="Aaryav Studios Google Business Profile"
+              >
+                <span>Google Profile</span>
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+            </div>
           </div>
 
           {/* Services Links */}

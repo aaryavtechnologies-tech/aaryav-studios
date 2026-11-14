@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Analytics } from "@/components/Analytics";
+import { SocialFloatingConnect } from "@/components/SocialFloatingConnect";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -137,6 +138,7 @@ export default function RootLayout({
         telephone: "+91-9328603748",
         email: "aaryavstudios@gmail.com",
         sameAs: [
+          "https://www.instagram.com/aaryavstudios/",
           "https://wa.me/919328603748",
           "https://wa.me/917048734139",
         ],
@@ -157,6 +159,11 @@ export default function RootLayout({
         image: `${siteUrl}/hero.png`,
         telephone: "+91-9328603748",
         email: "aaryavstudios@gmail.com",
+        hasMap: "https://share.google/XjYDdslcZE47oTgbS",
+        sameAs: [
+          "https://www.instagram.com/aaryavstudios/",
+          "https://share.google/XjYDdslcZE47oTgbS",
+        ],
         priceRange: "$$",
         currenciesAccepted: "INR",
         paymentAccepted: "Cash, Credit Card, UPI, Bank Transfer",
@@ -258,6 +265,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <SocialFloatingConnect />
       </body>
     </html>
   );

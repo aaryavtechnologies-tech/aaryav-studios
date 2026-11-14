@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { VideoGrid } from "@/components/VideoGrid";
 import { PhotographyGallery } from "@/components/PhotographyGallery";
+import { CreativePulse } from "@/components/CreativePulse";
 import { Video, Palette, Zap, CheckCircle2, MapPin, Phone, Mail, ArrowRight, Sparkles, Building2, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { shorts, featured } from "@/data/videos";
@@ -502,7 +503,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 12. CONTACT CTA */}
+      {/* 12. THE CREATIVE PULSE (INSTAGRAM & GOOGLE BUSINESS PROFILE INTEGRATION) */}
+      <CreativePulse />
+
+      {/* 13. CONTACT CTA */}
       <section
         id="contact"
         className="py-16 sm:py-24 bg-[#FFDE59] border-t-4 border-black"
