@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { cn } from "@/lib/utils";
+import { useState, useRef } from "react";
 
 interface BeforeAfterSliderProps {
   before: string;
@@ -25,35 +24,36 @@ export const BeforeAfterSlider = ({ before, after }: BeforeAfterSliderProps) => 
   return (
     <div 
       ref={containerRef}
-      className="relative w-full aspect-video border-4 border-black group cursor-ew-resize overflow-hidden"
+      className="relative w-full aspect-[4/3] sm:aspect-video border-3 sm:border-4 border-black group cursor-ew-resize overflow-hidden shadow-[4px_4px_0px_black] sm:shadow-brutalist select-none"
       onMouseMove={handleMove}
       onTouchMove={handleMove}
+      onTouchStart={handleMove}
     >
       {/* After Image (Edited) */}
       <div className="absolute inset-0">
-        <img src={after} alt="After" className="w-full h-full object-cover" />
-        <div className="absolute top-6 right-6 bg-[#FFDE59] border-4 border-black px-6 py-2 font-black text-lg uppercase z-10 shadow-brutalist-sm">
-          Edited
+        <img src={after} alt="Edited color graded preview" className="w-full h-full object-cover" />
+        <div className="absolute top-3 right-3 sm:top-6 sm:right-6 bg-[#FFDE59] border-2 sm:border-4 border-black px-2.5 sm:px-5 py-1 sm:py-1.5 font-black text-xs sm:text-base uppercase z-10 shadow-[2px_2px_0px_black] sm:shadow-brutalist-sm">
+          EDITED
         </div>
       </div>
 
       {/* Before Image (Raw) */}
       <div 
-        className="absolute inset-0 border-r-4 border-black z-20"
+        className="absolute inset-0 border-r-2 sm:border-r-4 border-black z-20"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
-        <img src={before} alt="Before" className="w-full h-full object-cover grayscale" />
-        <div className="absolute top-6 left-6 bg-white border-4 border-black px-6 py-2 font-black text-lg uppercase shadow-brutalist-sm">
-          Raw
+        <img src={before} alt="Raw ungraded footage preview" className="w-full h-full object-cover grayscale" />
+        <div className="absolute top-3 left-3 sm:top-6 sm:left-6 bg-white border-2 sm:border-4 border-black px-2.5 sm:px-5 py-1 sm:py-1.5 font-black text-xs sm:text-base uppercase shadow-[2px_2px_0px_black] sm:shadow-brutalist-sm">
+          RAW LOG
         </div>
       </div>
 
       {/* Slider Divider */}
       <div 
-        className="absolute top-0 bottom-0 w-2 bg-black z-30 pointer-events-none"
+        className="absolute top-0 bottom-0 w-1 sm:w-1.5 bg-black z-30 pointer-events-none"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-[#FFDE59] border-4 border-black rounded-none flex items-center justify-center font-black shadow-brutalist text-2xl group-hover:scale-110 transition-transform">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-11 sm:h-11 bg-[#FFDE59] border-2 sm:border-4 border-black rounded-none flex items-center justify-center font-black shadow-[2px_2px_0px_black] sm:shadow-brutalist text-sm sm:text-xl">
           ↔
         </div>
       </div>

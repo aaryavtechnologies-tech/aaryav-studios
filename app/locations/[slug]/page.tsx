@@ -76,87 +76,87 @@ export default async function SingleLocationPage({ params }: Props) {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-white min-h-screen">
+    <div className="pt-28 sm:pt-36 pb-16 sm:pb-24 bg-white min-h-screen overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(locationJsonLd) }}
       />
 
       {/* Breadcrumb Navigation */}
-      <div className="container mx-auto px-4 mb-8">
-        <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-black/60">
-          <Link href="/" className="hover:text-black">HOME</Link>
+      <div className="container mx-auto px-4 mb-6 sm:mb-8">
+        <div className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-black uppercase tracking-wider text-black/60 overflow-x-auto no-scrollbar">
+          <Link href="/" className="hover:text-black shrink-0">HOME</Link>
           <span>/</span>
-          <Link href="/locations" className="hover:text-black">LOCATIONS</Link>
+          <Link href="/locations" className="hover:text-black shrink-0">LOCATIONS</Link>
           <span>/</span>
-          <span className="text-black bg-[#FFDE59] px-2 py-0.5 border border-black">{loc.cityName}</span>
+          <span className="text-black bg-[#FFDE59] px-2 py-0.5 border border-black shrink-0">{loc.cityName}</span>
         </div>
       </div>
 
       {/* Hero Header */}
-      <section className="container mx-auto px-4 mb-16">
+      <section className="container mx-auto px-4 mb-10 sm:mb-16">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-black text-[#FFDE59] px-3 py-1 font-black uppercase text-xs tracking-wider border-2 border-black mb-4">
+          <div className="inline-flex items-center gap-2 bg-black text-[#FFDE59] px-3 py-1 font-black uppercase text-[10px] sm:text-xs tracking-wider border border-black mb-3 sm:mb-4">
             <MapPin className="w-3.5 h-3.5" />
-            <span>LOCAL REGIONAL FOCUS — {loc.cityName.toUpperCase()}</span>
+            <span>REGIONAL HUB — {loc.cityName.toUpperCase()}</span>
           </div>
-          <h1 className="text-4xl md:text-7xl brutalist-heading uppercase text-black mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl brutalist-heading uppercase text-black mb-4 sm:mb-6 leading-tight">
             {loc.headline}
           </h1>
-          <div className="p-4 bg-[#FFDE59] border-4 border-black shadow-brutalist text-sm md:text-base font-black uppercase text-black">
+          <div className="p-3 sm:p-4 bg-[#FFDE59] border-2 sm:border-4 border-black shadow-[3px_3px_0px_black] text-xs sm:text-sm font-black uppercase text-black leading-relaxed">
             ℹ️ {loc.physicalOfficeNote}
           </div>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="container mx-auto px-4 mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <section className="container mx-auto px-4 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
           <div className="lg:col-span-8">
-            <h2 className="text-3xl md:text-4xl brutalist-heading uppercase text-black mb-6">
-              WHY VISUAL CONTENT MATTERS IN {loc.cityName.toUpperCase()}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl brutalist-heading uppercase text-black mb-4 sm:mb-6">
+              WHY VISUAL MARKETING MATTERS IN {loc.cityName.toUpperCase()}
             </h2>
-            <p className="text-base md:text-lg font-bold text-black/90 leading-relaxed mb-10">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-black/85 leading-relaxed mb-8 sm:mb-10">
               {loc.localContext}
             </p>
 
             {/* Key Industries in this location */}
-            <h2 className="text-3xl md:text-4xl brutalist-heading uppercase text-black mb-6 flex items-center gap-3">
-              <Building2 className="w-8 h-8 text-black" />
-              <span>KEY INDUSTRIES WE SERVE IN {loc.cityName.toUpperCase()}</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl brutalist-heading uppercase text-black mb-4 sm:mb-6 flex items-center gap-2.5">
+              <Building2 className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
+              <span>KEY INDUSTRIES IN {loc.cityName.toUpperCase()}</span>
             </h2>
-            <div className="space-y-4 mb-12">
+            <div className="space-y-3 sm:space-y-4 mb-10 sm:mb-12">
               {loc.industriesServed.map((ind, i) => (
-                <div key={i} className="border-4 border-black p-6 bg-white shadow-brutalist">
-                  <h3 className="text-xl font-black uppercase text-black mb-2">{ind.name}</h3>
-                  <p className="text-sm font-bold text-black/75 uppercase leading-relaxed">{ind.desc}</p>
+                <div key={i} className="border-2 sm:border-4 border-black p-4 sm:p-6 bg-white shadow-[3px_3px_0px_black]">
+                  <h3 className="text-base sm:text-xl font-black uppercase text-black mb-1.5">{ind.name}</h3>
+                  <p className="text-xs sm:text-sm font-bold text-black/75 uppercase leading-relaxed">{ind.desc}</p>
                 </div>
               ))}
             </div>
 
             {/* Services provided */}
-            <h2 className="text-3xl md:text-4xl brutalist-heading uppercase text-black mb-6">
-              AVAILABLE SERVICES IN {loc.cityName.toUpperCase()}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl brutalist-heading uppercase text-black mb-4 sm:mb-6">
+              SERVICES IN {loc.cityName.toUpperCase()}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-10 sm:mb-12">
               {loc.localServices.map((svc, i) => (
-                <div key={i} className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_black] flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-black shrink-0 mt-0.5" />
-                  <span className="font-black text-sm uppercase text-black">{svc}</span>
+                <div key={i} className="bg-white border-2 sm:border-4 border-black p-3.5 sm:p-4 shadow-[3px_3px_0px_black] flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-black shrink-0 mt-0.5" />
+                  <span className="font-black text-xs sm:text-sm uppercase text-black leading-snug">{svc}</span>
                 </div>
               ))}
             </div>
 
             {/* FAQs */}
-            <h2 className="text-3xl md:text-4xl brutalist-heading uppercase text-black mb-6 flex items-center gap-3">
-              <HelpCircle className="w-8 h-8 text-black" />
-              <span>FREQUENTLY ASKED QUESTIONS — {loc.cityName.toUpperCase()}</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl brutalist-heading uppercase text-black mb-4 sm:mb-6 flex items-center gap-2.5">
+              <HelpCircle className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
+              <span>FREQUENTLY ASKED QUESTIONS</span>
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {loc.faqs.map((faq, i) => (
-                <div key={i} className="border-4 border-black p-6 bg-[#FFDE59]/20 shadow-[4px_4px_0px_black]">
-                  <h3 className="text-lg font-black uppercase text-black mb-2">Q: {faq.q}</h3>
-                  <p className="text-sm font-bold text-black/85 leading-relaxed">A: {faq.a}</p>
+                <div key={i} className="border-2 sm:border-4 border-black p-4 sm:p-6 bg-[#FFDE59]/20 shadow-[3px_3px_0px_black]">
+                  <h3 className="text-sm sm:text-lg font-black uppercase text-black mb-1.5">Q: {faq.q}</h3>
+                  <p className="text-xs sm:text-sm font-bold text-black/85 leading-relaxed">A: {faq.a}</p>
                 </div>
               ))}
             </div>
@@ -164,31 +164,31 @@ export default async function SingleLocationPage({ params }: Props) {
 
           {/* Sidebar CTA */}
           <div className="lg:col-span-4">
-            <div className="sticky top-28 bg-black text-white border-4 border-black shadow-brutalist p-8 text-center">
-              <span className="text-xs font-black bg-[#FFDE59] text-black px-3 py-1 uppercase tracking-widest inline-block mb-4">
+            <div className="lg:sticky lg:top-28 bg-black text-white border-3 sm:border-4 border-black shadow-[4px_4px_0px_#FFDE59] sm:shadow-brutalist p-6 sm:p-8 text-center">
+              <span className="text-[10px] sm:text-xs font-black bg-[#FFDE59] text-black px-2.5 py-1 uppercase tracking-widest inline-block mb-3">
                 LOCAL INQUIRY
               </span>
-              <h3 className="text-2xl md:text-3xl font-black uppercase text-white mb-4">
-                BOOK A CONSULTATION IN {loc.cityName.toUpperCase()}
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase text-white mb-3">
+                CONNECT IN {loc.cityName.toUpperCase()}
               </h3>
-              <p className="text-sm font-bold text-white/80 uppercase mb-6 leading-relaxed">
+              <p className="text-xs sm:text-sm font-bold text-white/80 uppercase mb-5 leading-relaxed">
                 Connect directly with our creative team to arrange an on-site shoot or discuss your marketing targets.
               </p>
               <div className="space-y-3">
                 <a href="https://wa.me/919328603748" target="_blank" rel="noreferrer" className="block">
-                  <Button className="w-full bg-[#FFDE59] text-black hover:bg-white hover:text-black py-4 text-base font-black">
-                    <Phone className="w-4 h-4 mr-2 inline" />
-                    WHATSAPP (+91 93286 03748)
+                  <Button className="w-full bg-[#FFDE59] text-black hover:bg-white hover:text-black py-3 sm:py-3.5 text-xs sm:text-sm font-black">
+                    <Phone className="w-3.5 h-3.5 mr-2 inline" />
+                    WhatsApp (+91 93286 03748)
                   </Button>
                 </a>
                 <Link href="/services" className="block">
-                  <Button className="w-full bg-white text-black hover:bg-[#FFDE59] py-4 text-base font-black border-2 border-white">
-                    VIEW ALL SERVICES
+                  <Button className="w-full bg-white text-black hover:bg-[#FFDE59] py-3 sm:py-3.5 text-xs sm:text-sm font-black border-2 border-white">
+                    View All Services
                   </Button>
                 </Link>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-white/20 text-left text-xs font-bold uppercase text-white/70 space-y-2">
+              <div className="mt-6 pt-5 border-t border-white/20 text-left text-[11px] font-bold uppercase text-white/70 space-y-1.5">
                 <p>📍 Studio: Kilvani Naka, Silvassa</p>
                 <p>⚡ Serving: Silvassa, Vapi, Daman, Dadra & Nagar Haveli</p>
                 <p>✉️ aaryavstudios@gmail.com</p>
@@ -199,17 +199,17 @@ export default async function SingleLocationPage({ params }: Props) {
       </section>
 
       {/* Other locations links */}
-      <section className="container mx-auto px-4 pt-12 border-t-4 border-black">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <Link href="/locations" className="font-black uppercase text-sm flex items-center gap-2 hover:underline">
-            <ArrowLeft className="w-4 h-4" />
+      <section className="container mx-auto px-4 pt-8 sm:pt-12 border-t-3 sm:border-t-4 border-black">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+          <Link href="/locations" className="font-black uppercase text-xs sm:text-sm flex items-center gap-1.5 hover:underline">
+            <ArrowLeft className="w-3.5 h-3.5" />
             <span>ALL LOCATIONS</span>
           </Link>
-          <div className="flex flex-wrap gap-4 text-sm font-black uppercase">
+          <div className="flex flex-wrap gap-3 text-xs sm:text-sm font-black uppercase">
             {locationsData.filter(l => l.slug !== loc.slug).map(other => (
               <Link key={other.slug} href={`/locations/${other.slug}`} className="hover:underline flex items-center gap-1">
                 <span>{other.cityName}</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3 h-3" />
               </Link>
             ))}
           </div>
@@ -218,4 +218,3 @@ export default async function SingleLocationPage({ params }: Props) {
     </div>
   );
 }
-
