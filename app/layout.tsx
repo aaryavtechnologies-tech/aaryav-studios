@@ -16,7 +16,11 @@ export const metadata: Metadata = {
   title: "AARYAV STUDIOS | Creative Video Production & Post-Production Agency",
   description: "Full-service video production and post-production agency portfolio of Aaryav Studios. Crafting high-converting visual stories for top brands, marketing agencies, and enterprise creators.",
   icons: {
-    icon: "/icon.png",
+    icon: [
+      { url: "/icon.png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-icon.png",
   },
 };
 
