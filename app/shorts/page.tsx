@@ -5,6 +5,9 @@ import { shorts } from "@/data/videos";
 export const metadata: Metadata = {
   title: "Shorts & Reels Portfolio | High-Retention Vertical Video Editing",
   description: "Browse high-converting, viral vertical videos engineered by Aaryav Studios for Instagram Reels, YouTube Shorts, and TikTok. Fast-paced cuts, sound design & motion graphics.",
+  alternates: {
+    canonical: "/shorts",
+  },
   openGraph: {
     title: "Shorts & Reels Portfolio | Aaryav Studios",
     description: "High-retention vertical content for Instagram Reels, TikTok, and YouTube Shorts.",

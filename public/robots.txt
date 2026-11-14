@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aaryavstudios.com/sitemap.xml
-
+Sitemap: https://studios.aaryavtech.online/sitemap.xml

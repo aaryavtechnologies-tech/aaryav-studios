@@ -4,82 +4,65 @@ import { Button } from "@/components/Button";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { VideoGrid } from "@/components/VideoGrid";
 import { PhotographyGallery } from "@/components/PhotographyGallery";
-import { Video, Palette, Zap, CheckCircle2, Camera, MapPin, Phone, Mail } from "lucide-react";
+import { Video, Palette, Zap, CheckCircle2, Camera, MapPin, Phone, Mail, ArrowRight, Sparkles, Building2, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { shorts, featured } from "@/data/videos";
+import { servicesData } from "@/data/services";
+import { locationsData } from "@/data/locations";
+import { blogPosts } from "@/data/blogPosts";
 import Link from "next/link";
 
 export default function Home() {
-  const services = [
-    {
-      title: "VIDEO EDITING",
-      icon: <Video className="w-8 h-8" />,
-      desc: "Professional cuts and cinematic flow.",
-    },
-    {
-      title: "COLOR GRADING",
-      icon: <Palette className="w-8 h-8" />,
-      desc: "Making your footage pop with premium looks.",
-    },
-    {
-      title: "REELS / SHORTS",
-      icon: <Zap className="w-8 h-8" />,
-      desc: "Fast-paced, high-retention vertical content.",
-    },
-    {
-      title: "YOUTUBE EDITING",
-      icon: <Video className="w-8 h-8" />,
-      desc: "Full channel management and storytelling.",
-    },
-  ];
-
   return (
     <main className="min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="container mx-auto px-4 pt-48 pb-20 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="container mx-auto px-4 pt-44 pb-20 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-6xl md:text-8xl brutalist-heading mb-6 uppercase">
-              WE CREATE{" "}
-              <span className="bg-[#FFDE59] px-4 shadow-[6px_6px_0px_black]">
-                IMPACTFUL
+            {/* Top Geo-Target Badge */}
+            <div className="inline-flex items-center gap-2 bg-black text-[#FFDE59] px-4 py-1.5 font-black uppercase text-xs md:text-sm tracking-wider border-2 border-black mb-6">
+              <Sparkles className="w-4 h-4" />
+              <span>SILVASSA • VAPI • DAMAN • DIGITAL GROWTH</span>
+            </div>
+
+            {/* Target SEO H1 */}
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl brutalist-heading mb-6 uppercase text-black leading-none">
+              SOCIAL MEDIA MARKETING &{" "}
+              <span className="bg-[#FFDE59] px-3 md:px-4 shadow-[6px_6px_0px_black]">
+                CREATIVE PRODUCTION
               </span>{" "}
-              VISUAL STORIES
+              AGENCY IN SILVASSA
             </h1>
-            <p className="text-xl md:text-2xl font-black uppercase mb-10 tracking-tight bg-black text-white inline-block px-4 py-2 border-4 border-black shadow-brutalist">
-              CAPTURING MOMENTS & TRANSFORMING RAW FOOTAGE INTO HIGH-CONVERTING CINEMATIC EXPERIENCES.
+
+            <p className="text-lg md:text-2xl font-black uppercase mb-10 tracking-tight bg-black text-white inline-block px-4 py-2 border-4 border-black shadow-brutalist max-w-3xl leading-relaxed">
+              Capturing moments & transforming raw footage into high-converting social media marketing, viral Instagram reels, and commercial video production across Silvassa, Vapi & Daman.
             </p>
-            <div className="flex flex-col md:flex-row gap-6 justify-center">
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/services">
+                <Button className="w-full sm:w-auto text-lg md:text-xl px-10 py-5 bg-[#FFDE59] text-black hover:bg-black hover:text-[#FFDE59]">
+                  EXPLORE SERVICES
+                </Button>
+              </Link>
               <Link href="/videos">
-                <Button className="w-full md:w-auto text-xl px-12 py-6">
+                <Button className="w-full sm:w-auto text-lg md:text-xl px-10 py-5 bg-white text-black hover:bg-black hover:text-[#FFDE59] border-4 border-black">
                   VIEW OUR WORK
                 </Button>
               </Link>
               <Button
                 variant="secondary"
-                className="hover:bg-black hover:text-[#FFDE59] w-full md:w-auto text-xl px-12 py-6"
+                className="w-full sm:w-auto text-lg md:text-xl px-10 py-5 bg-black text-[#FFDE59] hover:bg-white hover:text-black border-4 border-black"
                 onClick={() =>
                   document
                     .getElementById("contact")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                WORK WITH US
-              </Button>
-              <Button
-                variant="secondary"
-                className="w-full md:w-auto text-xl px-12 py-6 bg-white text-black hover:bg-[#FFDE59] border-4 border-black"
-                onClick={() =>
-                  document
-                    .getElementById("team")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-              >
-                OUR TEAM
+                FREE CONSULTATION
               </Button>
             </div>
           </motion.div>
@@ -88,15 +71,68 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="mt-20 relative max-w-5xl mx-auto"
+            className="mt-16 relative max-w-5xl mx-auto"
           >
             <div className="absolute inset-0 bg-[#FFDE59] translate-x-4 translate-y-4 border-4 border-black shadow-[8px_8px_0px_black]" />
             <img
               src="/hero.png"
-              alt="Professional Video Editing"
+              alt="Aaryav Studios - Video Production and Social Media Marketing Agency in Silvassa"
               className="relative z-10 w-full border-4 border-black object-cover aspect-[21/9] grayscale hover:grayscale-0 transition-all duration-700"
             />
           </motion.div>
+        </div>
+      </section>
+
+      {/* 1.2 CORE SERVICES PREVIEW SECTION */}
+      <section id="services" className="py-20 bg-white border-y-4 border-black">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="bg-black text-[#FFDE59] text-xs font-black uppercase tracking-widest px-3 py-1 inline-block mb-3 border border-black">
+              WHAT WE DO
+            </span>
+            <h2 className="text-4xl md:text-7xl brutalist-heading mb-4 uppercase">
+              CREATIVE & <span className="bg-[#FFDE59] px-3 shadow-brutalist">MARKETING</span> SERVICES
+            </h2>
+            <p className="text-base md:text-xl font-bold uppercase text-black/75">
+              Engineered to drive regional visibility and measurable customer inquiries for businesses across South Gujarat & Dadra & Nagar Haveli.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map((svc, i) => (
+              <div
+                key={svc.slug}
+                className="bg-white border-4 border-black p-6 shadow-brutalist flex flex-col justify-between hover:-translate-y-1 transition-transform"
+              >
+                <div>
+                  <span className="text-xs font-black bg-black text-[#FFDE59] px-2 py-0.5 uppercase tracking-widest inline-block mb-3">
+                    0{i + 1} / SERVICE
+                  </span>
+                  <h3 className="text-2xl font-black uppercase text-black mb-2">
+                    {svc.shortTitle}
+                  </h3>
+                  <p className="text-xs font-bold text-black/70 uppercase leading-relaxed mb-6">
+                    {svc.tagline}
+                  </p>
+                </div>
+                <Link
+                  href={`/services/${svc.slug}`}
+                  className="font-black text-xs uppercase tracking-wider bg-[#FFDE59] hover:bg-black hover:text-[#FFDE59] text-black px-3 py-2 border-2 border-black flex items-center justify-between transition-colors"
+                >
+                  <span>LEARN MORE</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/services">
+              <Button className="text-lg px-10 py-5 bg-black text-[#FFDE59] hover:bg-white hover:text-black">
+                EXPLORE ALL SERVICES & PACKAGES →
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -199,17 +235,9 @@ export default function Home() {
                   hooked until the last second.
                 </p>
               </div>
-              <div className="mt-12 flex gap-4">
-                <div className="bg-black text-[#FFDE59] px-6 py-3 font-black text-xl border-4 border-black">
-                  MOTION GRAPHICS
-                </div>
-                <div className="bg-white text-black px-6 py-3 font-black text-xl border-4 border-black shadow-[4px_4px_0px_black]">
-                  RETENTION DRIVEN
-                </div>
-              </div>
             </div>
 
-            <div className="w-full">
+            <div className="w-full md:w-1/2">
               <div className="relative group max-w-5xl mx-auto">
                 <div className="absolute inset-0 bg-black translate-x-6 translate-y-6 border-4 border-white" />
                 <div className="relative z-10 border-8 border-black shadow-brutalist-lg aspect-video w-full overflow-hidden bg-black">
@@ -224,6 +252,52 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4.5 REGIONAL TARGET LOCATIONS */}
+      <section className="py-24 bg-white border-b-4 border-black">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="bg-black text-[#FFDE59] text-xs font-black uppercase tracking-widest px-3 py-1 inline-block mb-3 border border-black">
+              GEOGRAPHIC COVERAGE
+            </span>
+            <h2 className="text-4xl md:text-7xl brutalist-heading mb-4 uppercase">
+              AREAS WE <span className="bg-[#FFDE59] px-3 shadow-brutalist">SERVE</span>
+            </h2>
+            <p className="text-base md:text-xl font-bold uppercase text-black/75">
+              Operating our central production studio in Silvassa while serving ambitious brands, manufacturers & resorts throughout South Gujarat and Daman.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {locationsData.map((loc) => (
+              <div
+                key={loc.slug}
+                className="bg-white border-4 border-black p-8 shadow-brutalist flex flex-col justify-between hover:-translate-y-1 transition-transform"
+              >
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-black bg-black text-[#FFDE59] px-2.5 py-1 uppercase tracking-widest w-fit mb-3">
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span>{loc.cityName.toUpperCase()}</span>
+                  </div>
+                  <h3 className="text-2xl font-black uppercase mb-3 text-black">
+                    {loc.cityName}
+                  </h3>
+                  <p className="text-xs font-bold text-black/75 uppercase leading-relaxed mb-6">
+                    {loc.headline}
+                  </p>
+                </div>
+                <Link
+                  href={`/locations/${loc.slug}`}
+                  className="font-black text-xs uppercase tracking-wider bg-[#FFDE59] hover:bg-black hover:text-[#FFDE59] text-black px-4 py-3 border-2 border-black flex items-center justify-between transition-colors"
+                >
+                  <span>VIEW {loc.cityName.toUpperCase()} HUB</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -249,7 +323,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] sm:aspect-[4/4] overflow-hidden bg-black border-b-4 border-white">
                 <img
                   src="/founder.jpg"
-                  alt="Himanshu Singh - Founder & CEO, Aaryav Studios"
+                  alt="Himanshu Singh - Founder & CEO of Aaryav Studios Silvassa"
                   className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute top-4 left-4 bg-[#FFDE59] text-black font-black uppercase text-xs sm:text-sm px-3 py-1 border-2 border-black shadow-[3px_3px_0px_black]">
@@ -280,7 +354,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] sm:aspect-[4/4] overflow-hidden bg-black border-b-4 border-white">
                 <img
                   src="/me1.png"
-                  alt="Chirag Singh - Co-Founder & COO"
+                  alt="Chirag Singh - Co-Founder & COO of Aaryav Studios Silvassa"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute top-4 left-4 bg-[#FFDE59] text-black font-black uppercase text-xs sm:text-sm px-3 py-1 border-2 border-black shadow-[3px_3px_0px_black]">
@@ -320,7 +394,7 @@ export default function Home() {
                   <span className="text-4xl md:text-5xl font-black text-black">
                     {stat.val}
                   </span>
-                  <span className="font-black uppercase tracking-widest text-xs mt-1">
+                  <span className="text-xs md:text-sm font-bold uppercase tracking-widest mt-1 text-black/80">
                     {stat.label}
                   </span>
                 </div>
@@ -337,6 +411,54 @@ export default function Home() {
               "TO TURN IDEAS INTO IMPACTFUL VISUAL EXPERIENCES THAT HELP BRANDS
               AND CREATORS SCALE IN TODAY’S FAST-PACED DIGITAL WORLD."
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5.5 LATEST STRATEGY INSIGHTS */}
+      <section className="py-24 bg-[#FFDE59] border-t-4 border-black">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+            <div>
+              <span className="bg-black text-[#FFDE59] text-xs font-black uppercase tracking-widest px-3 py-1 inline-block mb-3 border border-black">
+                PRACTICAL GUIDES
+              </span>
+              <h2 className="text-4xl md:text-6xl brutalist-heading uppercase text-black">
+                LATEST STRATEGY INSIGHTS
+              </h2>
+            </div>
+            <Link href="/blog">
+              <Button className="bg-black text-[#FFDE59] hover:bg-white hover:text-black text-base px-6 py-4">
+                VIEW ALL ARTICLES →
+              </Button>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {blogPosts.slice(0, 3).map((post) => (
+              <article key={post.slug} className="bg-white border-4 border-black p-6 shadow-brutalist flex flex-col justify-between">
+                <div>
+                  <span className="bg-black text-[#FFDE59] text-[10px] font-black uppercase px-2 py-0.5 tracking-wider inline-block mb-3">
+                    {post.category}
+                  </span>
+                  <h3 className="text-xl font-black uppercase text-black mb-3">
+                    <Link href={`/blog/${post.slug}`} className="hover:underline">
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p className="text-xs font-bold text-black/75 uppercase leading-relaxed mb-6">
+                    {post.excerpt}
+                  </p>
+                </div>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="font-black text-xs uppercase bg-[#FFDE59] hover:bg-black hover:text-[#FFDE59] text-black px-3 py-2 border-2 border-black flex items-center justify-between transition-colors"
+                >
+                  <span>READ GUIDE</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>

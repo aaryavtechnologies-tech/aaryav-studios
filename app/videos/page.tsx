@@ -5,6 +5,9 @@ import { featured } from "@/data/videos";
 export const metadata: Metadata = {
   title: "Long-Form Video Production & YouTube Editing Portfolio",
   description: "Explore cinematic long-form video production, YouTube documentary edits, color grading, and commercial films created by Aaryav Studios post-production team.",
+  alternates: {
+    canonical: "/videos",
+  },
   openGraph: {
     title: "Long-Form Video Portfolio | Aaryav Studios",
     description: "Cinematic storytelling, documentary editing, and professional color grading by Aaryav Studios.",
