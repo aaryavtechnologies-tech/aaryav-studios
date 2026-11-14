@@ -214,7 +214,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black translate-x-6 translate-y-6 border-4 border-white" />
                 <div className="relative z-10 border-8 border-black shadow-brutalist-lg aspect-video w-full overflow-hidden bg-black">
                   <video
-                    src="/videos/Core-Dev-Reel-1.mp4"
+                    src="https://res.cloudinary.com/k7xizuxh/video/upload/v1794677358/aaryav-studios/core-dev-reel-1.mp4"
                     controls
                     autoPlay
                     muted

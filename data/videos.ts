@@ -4,53 +4,53 @@ export const shorts = [
     id: "f1",
     title: "0113 PROJECT",
     description: "Color Grading + Transitions",
-    url: "/videos/0113.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794676660/aaryav-studios/0113.mp4",
     type: "short"
   },
   {
     id: "f2",
     title: "VILLA CINEMATIC",
     description: "Cinematic B-Roll",
-    url: "/videos/villa-2.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794677102/aaryav-studios/villa-2.mp4",
     type: "short"
   },
   {
     id: "f3",
     title: "MONEY HUB PRO",
     description: "Motion Graphics",
-    url: "/videos/MONEY-HUB-10.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794676893/aaryav-studios/money-hub-10.mp4",
     type: "short"
   },
   {
     id: "f4",
     title: "PRO EDIT 0119",
     description: "Dynamic Storytelling",
-    url: "/videos/0119.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794682325/aaryav-studios/0119.mp4",
     type: "short"
   },
   // Original shorts
   {
     id: "s1",
     title: "WATCH EDIT",
-    url: "/videos/new-ss-watch-2.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794677166/aaryav-studios/new-ss-watch-2.mp4",
     type: "short"
   },
   {
     id: "s2",
     title: "MONEY HUB",
-    url: "/videos/MONEY-HUB-4-%E5%89%AF%E6%9C%AC.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794677258/aaryav-studios/money-hub-4.mp4",
     type: "short"
   },
   {
     id: "s3",
     title: "V-VIDEO",
-    url: "/videos/v-video-1-final.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794677134/aaryav-studios/v-video-1-final.mp4",
     type: "short"
   },
   {
     id: "s4",
     title: "POOJARA EDIT",
-    url: "/videos/poojara-video-20.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794677282/aaryav-studios/poojara-video-20.mp4",
     type: "short"
   },
 ];
@@ -59,7 +59,7 @@ export const featured = [
   {
     id: "s_typography",
     title: "TYPOGRAPHY MASTERCLASS",
-    url: "/videos/Core-Dev-Reel-1.mp4",
+    url: "https://res.cloudinary.com/k7xizuxh/video/upload/v1794677358/aaryav-studios/core-dev-reel-1.mp4",
     type: "long",
     description: "High-retention kinetic typography and motion design."
   },
