@@ -29,6 +29,13 @@ export const Analytics = () => {
             link_url: href,
           });
         }
+        if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({
+            event: "conversion_whatsapp",
+            conversion_type: "WhatsApp Click",
+            link_url: href,
+          });
+        }
       } else if (href.startsWith("tel:")) {
         if (typeof window.gtag === "function") {
           window.gtag("event", "contact", {
@@ -37,11 +44,25 @@ export const Analytics = () => {
             link_url: href,
           });
         }
+        if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({
+            event: "conversion_phone",
+            conversion_type: "Phone Call Click",
+            link_url: href,
+          });
+        }
       } else if (href.startsWith("mailto:")) {
         if (typeof window.gtag === "function") {
           window.gtag("event", "contact", {
             event_category: "Conversion",
             event_label: "Email Click",
+            link_url: href,
+          });
+        }
+        if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({
+            event: "conversion_email",
+            conversion_type: "Email Click",
             link_url: href,
           });
         }
