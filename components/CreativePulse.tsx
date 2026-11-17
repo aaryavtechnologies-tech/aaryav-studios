@@ -424,3 +424,4 @@ export function CreativePulse() {
     </section>
   );
 }
+
